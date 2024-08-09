@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Welcome&nbsp;{{ request.session.urname }}</h1>
+        <a href="{% url 'signin' %}">Login</a>&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'register' %}">Register</a>&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'logout' %}">Logout</a>&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'viewall' %}">View All</a>&nbsp;&nbsp;&nbsp;
+    </body>
+</html>

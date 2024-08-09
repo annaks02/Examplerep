@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> REGISTER </H1>
+    <form action="../updatedata/{{ reg.id }}" method="post">
+{% csrf_token %}
+
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" value="{{ reg.name }}" placeholder="Name" required><br><br>
+
+
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" value="{{ reg.phone }}" placeholder="Phone No." required><br><br>
+
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" value="{{ reg.email }}" placeholder="E-mail" required><br><br>
+
+
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" value="{{ reg.username }}" placeholder="Username" required><br><br>
+
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" value="{{ reg.password }}" placeholder="Password" required><br><br>
+
+
+<input type="submit" value="Register">
+  </form>
+{% endblock %}
+
